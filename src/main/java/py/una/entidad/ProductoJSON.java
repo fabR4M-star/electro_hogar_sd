@@ -36,6 +36,7 @@ public class ProductoJSON {
         return objetoJson(p).toJSONString();
     }
 
+    @SuppressWarnings("unchecked")
     public static String listaObjetoString(List<Producto> productos) {
         JSONArray array = new JSONArray();
         for (Producto producto : productos) {
@@ -44,6 +45,7 @@ public class ProductoJSON {
         return array.toJSONString();
     }
 
+    @SuppressWarnings("unchecked")
     private static JSONObject objetoJson(Producto p) {
         JSONObject obj = new JSONObject();
         obj.put("idProducto", p.getIdProducto());
