@@ -58,6 +58,27 @@
       </configuration>
     </execution>
 
+    <!-- Ejecución para el servidor TCP -->
+    <execution>
+      <id>build-servidorTCP</id>
+      <phase>package</phase>
+      <goals>
+        <goal>single</goal>
+      </goals>
+      <configuration>
+        <finalName>servidorTCP</finalName>
+        <appendAssemblyId>false</appendAssemblyId>
+        <archive>
+          <manifest>
+            <mainClass>py.una.servidor.VentasTCPMultiServer</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+    </execution>
+
     <!-- Ejecución para el cliente UDP -->
     <execution>
       <id>build-clienteUDP</id>
@@ -71,6 +92,27 @@
         <archive>
           <manifest>
             <mainClass>py.una.cliente.VentasUDPClient</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+    </execution>
+
+    <!-- Ejecución para el cliente TCP -->
+    <execution>
+      <id>build-clienteTCP</id>
+      <phase>package</phase>
+      <goals>
+        <goal>single</goal>
+      </goals>
+      <configuration>
+        <finalName>clienteTCP</finalName>
+        <appendAssemblyId>false</appendAssemblyId>
+        <archive>
+          <manifest>
+            <mainClass>py.una.cliente.VentasTCPClient</mainClass>
           </manifest>
         </archive>
         <descriptorRefs>
