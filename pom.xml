@@ -37,48 +37,6 @@
   <artifactId>maven-assembly-plugin</artifactId>
   <executions>
 
-    <!-- Ejecución para el servidor UDP -->
-    <execution>
-      <id>build-servidorUDP</id>
-      <phase>package</phase>
-      <goals>
-        <goal>single</goal>
-      </goals>
-      <configuration>
-        <finalName>servidorUDP</finalName>
-        <appendAssemblyId>false</appendAssemblyId>
-        <archive>
-          <manifest>
-            <mainClass>py.una.servidor.VentasUDPServer</mainClass>
-          </manifest>
-        </archive>
-        <descriptorRefs>
-          <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-      </configuration>
-    </execution>
-
-    <!-- Ejecución para el servidor TCP -->
-    <execution>
-      <id>build-servidorTCP</id>
-      <phase>package</phase>
-      <goals>
-        <goal>single</goal>
-      </goals>
-      <configuration>
-        <finalName>servidorTCP</finalName>
-        <appendAssemblyId>false</appendAssemblyId>
-        <archive>
-          <manifest>
-            <mainClass>py.una.servidor.VentasTCPMultiServer</mainClass>
-          </manifest>
-        </archive>
-        <descriptorRefs>
-          <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-      </configuration>
-    </execution>
-
     <!-- Ejecución para el cliente UDP -->
     <execution>
       <id>build-clienteUDP</id>
@@ -101,7 +59,7 @@
     </execution>
 
     <!-- Ejecución para el cliente TCP -->
-    <execution>
+    <!-- <execution>
       <id>build-clienteTCP</id>
       <phase>package</phase>
       <goals>
@@ -119,7 +77,7 @@
           <descriptorRef>jar-with-dependencies</descriptorRef>
         </descriptorRefs>
       </configuration>
-    </execution>
+    </execution> -->
 
   </executions>
 </plugin>
