@@ -5,7 +5,7 @@ import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 
-class VentasUDPClient {
+public class VentasUDPClient {
 
     public static void main(String a[]) throws Exception {
 
@@ -60,7 +60,7 @@ class VentasUDPClient {
                     int port = receivePacket.getPort();
 
                     System.out.println("Respuesta desde =  " + returnIPAddress + ":" + port);
-                    System.out.println(respuesta);
+                    System.out.println(JsonTabla.convertir(respuesta));
 
                 } catch (SocketTimeoutException ste) {
 
@@ -74,5 +74,6 @@ class VentasUDPClient {
             System.err.println(ex);
         }
     }
+
 } 
 

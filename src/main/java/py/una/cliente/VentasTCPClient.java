@@ -33,7 +33,7 @@ public class VentasTCPClient {
         String fromUser;
 
         while ((fromServer = in.readLine()) != null) {
-            System.out.println("Servidor: " + fromServer);
+            System.out.println(JsonTabla.convertir(fromServer));
             if (fromServer.equals("Bye")) {
                 break;
             }
